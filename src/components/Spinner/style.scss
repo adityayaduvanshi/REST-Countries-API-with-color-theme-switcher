@@ -1,0 +1,18 @@
+@use "../../styles/vars" as v;
+
+.spinner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  &--dark {
+    color: v.$dark-mode-text;
+  }
+  &__text {
+    margin-left: 10px;
+    // color: v.$light-mode-text;
+    font-size: 18px;
+    font-weight: v.$font-weight-bold;
+  };
+};

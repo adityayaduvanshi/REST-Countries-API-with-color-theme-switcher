@@ -1,0 +1,48 @@
+@use "../../styles/vars" as v;
+@use "../../styles/mixins" as m;
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 60px;
+  background-color: v.$light-mode-elements;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: background-color ease-in-out 1s;
+  &--dark {
+    background-color: v.$dark-mode-elements;
+  };
+  @include m.breakpoint(mobile) {
+    width: 100%;
+    height: 80px;
+    padding: 20px;
+    align-items: center;
+  }
+  &__title {
+    font-size: 18px;
+    font-weight: v.$font-weight-extra-bold;
+    @include m.breakpoint(mobile) {
+      font-size: v.$font-size-text;
+    }
+  };
+  &__mode {
+    display: flex;
+    align-items: center;
+  };
+  &__button {
+    border: none;
+    color: v.$light-mode-text;
+    background: transparent;
+    font-size: v.$font-size-text;
+    font-weight: v.$font-weight-bold;
+    font-family: "Nunito Sans", sans-serif;
+    &--dark {
+      color: v.$dark-mode-text;
+    };
+    @include m.breakpoint(mobile) {
+      font-size: 12px;
+      font-weight: v.$font-weight-bold;
+    }
+  };
+};

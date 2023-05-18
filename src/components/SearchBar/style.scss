@@ -1,0 +1,59 @@
+@use "../../styles/vars" as v;
+@use "../../styles/mixins" as m;
+
+.search-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 60px 45px;
+  @include m.breakpoint(mobile) {
+    width: 90%;
+    flex-direction: column;
+    margin: 30px 20px 45px;
+  }
+  &__form {
+    position: relative;
+    &--input {
+      width: 480px;
+      height: 50px;
+      padding: 20px 60px;
+      font-family: "Nunito Sans", sans-serif;
+      background-color: v.$light-mode-elements;
+      color: v.$light-mode-input;
+      font-size: v.$font-size-text;
+      font-weight: v.$font-weight-bold;
+      border: none;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      border-radius: 4px;
+      transition: background-color ease-in-out 1s;
+      &::placeholder {
+        opacity: .7;
+        font-size: v.$font-size-text;
+        font-weight: v.$font-weight-bold;
+      };
+      &--dark {
+        background-color: v.$dark-mode-elements;
+        color: v.$dark-mode-text;
+        &::placeholder {
+          color: v.$dark-mode-text;
+        };
+      };
+      @include m.breakpoint(tablet) {
+        width: 400px;
+      }
+      @include m.breakpoint(mobile) {
+        width: 100%;
+      }
+    }
+    &--icon {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      color: v.$light-mode-input;
+      font-size: 20px;
+      &--dark {
+        color: v.$dark-mode-text;
+      }
+    }
+  }
+}

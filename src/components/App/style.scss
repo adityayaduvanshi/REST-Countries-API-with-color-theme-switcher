@@ -1,0 +1,13 @@
+@use '../../styles/vars' as v;
+
+.app {
+  font-family: 'Nunito Sans', sans-serif;
+  background-color: v.$light-mode-bg;
+  min-height: 100vh;
+  color: v.$light-mode-text;
+  transition: background-color ease-in-out 1s;
+  &--dark {
+    background-color: v.$dark-mode-bg;
+    color: v.$dark-mode-text;
+  };
+};

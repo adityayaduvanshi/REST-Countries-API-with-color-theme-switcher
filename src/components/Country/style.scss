@@ -1,0 +1,165 @@
+@use "../../styles/vars" as v;
+@use "../../styles/mixins" as m;
+
+.country {
+  margin: 50px 60px;
+  @include m.breakpoint(tablet) {
+    margin: 50px 60px 0;
+  }
+  @include m.breakpoint(mobile) {
+   margin: 50px 30px 0;
+  }
+  &__button {
+    position: relative;
+    width: 95px;
+    height: 28px;
+    text-align: center;
+    background-color: v.$light-mode-bg;
+    color: v.$light-mode-text;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: v.$font-weight-normal;
+    border: none;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color ease-in-out 1s;
+    &--dark {
+      background-color: v.$dark-mode-elements;
+      color: v.$dark-mode-text;
+    }
+    &--icon {
+      font-size: 15px;
+      position: absolute;
+      left: 15px;
+      top: 6px;
+    }
+    & span {
+      margin-left: 8px;
+    }
+  }
+  &__error {
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: v.$font-weight-bold;
+  }
+  &__section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    height: 350px;
+    @include m.breakpoint(tablet) {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding-bottom: 50px;
+    }
+    @include m.breakpoint(mobile) {
+      margin-top: 50px;
+    }
+  }
+  &__flag {
+    width: 40%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include m.breakpoint(tablet) {
+        width: 80%;
+      }
+      @include m.breakpoint(mobile) {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    @include m.breakpoint(tablet) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  &__details {
+    width: 50%;
+    padding: 40px 20px 0 90px;
+    @include m.breakpoint(tablet) {
+      width: 100%;
+      padding: 40px 60px 0;
+    }
+    @include m.breakpoint(mobile) {
+      padding: 40px 0 0;
+    }
+    &--title {
+      font-size: 25px;
+      font-weight: v.$font-weight-extra-bold;
+    }
+    &--elements {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 25px 0 65px;
+      line-height: 25px;
+      @include m.breakpoint(tablet) {
+        margin: 25px 0 30px;
+      }
+      @include m.breakpoint(mobile) {
+        flex-direction: column;
+        margin: 25px 0 40px;
+      }
+      & > div:first-child {
+        @include m.breakpoint(tablet) {
+          margin-bottom: 35px;
+        }
+      }
+      & p {
+        font-size: v.$font-size-text;
+        font-weight: v.$font-weight-normal;
+      }
+      & span {
+        font-weight: v.$font-weight-bold;
+      }
+    }
+    &--list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+      @include m.breakpoint(mobile) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      & p {
+        font-size: v.$font-size-text;
+        font-weight: v.$font-weight-normal;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        @include m.breakpoint(tablet) {
+          margin-bottom: 15px;
+        }
+        @include m.breakpoint(mobile) {
+          font-size: 15px;
+        }
+      }
+      & span {
+        font-weight: v.$font-weight-bold;
+      }
+    }
+    &--button {
+      width: auto;
+      height: 25px;
+      padding: 5px 25px;
+      margin-right: 7px;
+      margin-bottom: 10px;
+      background-color: v.$light-mode-bg;
+      color: v.$light-mode-text;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 12px;
+      font-weight: v.$font-weight-normal;
+      border: none;
+      border-radius: 4px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: background-color ease-in-out 1s;
+      &--dark {
+        background-color: v.$dark-mode-elements;
+        color: v.$dark-mode-text;
+      }
+    }
+  }
+}
