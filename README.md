@@ -17,7 +17,7 @@ This is a solution to the [REST Countries API with color theme switcher challeng
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/Deydii/rest-countries-api-with-color-theme-switcher-master.git
+$ git clone https://github.com/adityayaduvanshi/REST-Countries-API-with-color-theme-switcher.git
 
 # Installing all the dependencies
 $ yarn
